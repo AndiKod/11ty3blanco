@@ -1,0 +1,20 @@
+{
+  "name": "abcvite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --watch",
+    "b:11ty": "npx @11ty/eleventy",
+    "b:css": "npx lightningcss --minify --bundle input/css/styles.css -o ./_site/css/styles.css",
+    "b:js": "npx esbuild input/js/scripts.js --bundle --minify --outfile=_site/js/scripts.js",
+    "build": "pnpm run b:css && pnpm run b:js && pnpm run b:11ty"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0",
+    "lightningcss-cli": "^1.27.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "3.0.0-alpha.20"
+  }
+}
