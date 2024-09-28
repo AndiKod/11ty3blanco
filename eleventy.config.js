@@ -1,6 +1,6 @@
 export default function(eleventyConfig) {
 
-  // Copy `img/` to `_site/subfolder/img`
+  // Copy the assets folder content to the _site folder
 	eleventyConfig.addPassthroughCopy({
 		"./assets/": "/"
 	});
@@ -8,10 +8,10 @@ export default function(eleventyConfig) {
   // Return your Object options:
   return {
     dir: {
-      input: "content",
-      output: "_site",
-      layouts: "../includes/layouts",
-      includes: "../includes/partials"
+      input: "content", // The input directory for your templates, aka Root
+      output: "_site", // The output directory for your compiled templates
+      layouts: "../includes/layouts", // The directory for your layouts
+      includes: "../includes/partials" // The directory for your includes
     }
   }
 
