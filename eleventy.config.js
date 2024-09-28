@@ -1,25 +1,18 @@
-// ESM syntax (e.g. `export default`) is supported in Eleventy v3.0+
 export default function(eleventyConfig) {
 
-
   // Copy `img/` to `_site/subfolder/img`
-	eleventyConfig.addPassthroughCopy("input/css/");
-	eleventyConfig.addPassthroughCopy("input/js/");
-  // Watch for changes in `src/scss/`
-  eleventyConfig.addWatchTarget("./input/css/");
-  eleventyConfig.addWatchTarget("./input/js/");
+	eleventyConfig.addPassthroughCopy({
+		"./assets/": "/"
+	});
 
   // Return your Object options:
   return {
     dir: {
-      input: "input",
+      input: "content",
       output: "_site",
-      layouts: "inc/layout",
-      includes: "inc/partial"
+      layouts: "../includes/layouts",
+      includes: "../includes/partials"
     }
   }
-
-  
-  
 
 };
