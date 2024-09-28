@@ -1,13 +1,14 @@
-# 11ty3 Vanilla
-A simple 11ty3 starter with no over complications.
+# Blanco
+A simple, blank, 11ty3 starter with no over complications.
+
 ---
 
-Clone, then:
+Clone the repo, then:
 
 ```bash
 pnpm i
 ```
-To launch the dev server:
+Fire the dev server on localhost:8080:
 
 ```bash
 pnpm run dev
