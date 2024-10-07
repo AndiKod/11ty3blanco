@@ -24,6 +24,6 @@ This will generate the `_site` folder with the built site. CSS and JS will be mi
 
 ## Why?
 
-I had another 11ty starter (Tadam) with a lot of things included in it, and realized it can be overkill and bloated. This is a simpler version of the same thing, with just the bare minimum.
+Sometime you just need a clean start and build on top of it. This starter is a good choice if you want to start a new project from scratch without any opinionated setup.
 
-Things like a collection of filters, shortcodes, CDN libraries snippets or other usefull related things will be added to a separate repo. Copy/Paste is still king sometimes.
+For code snippets and example implementation of things like blog parts, plugins, external data, etc.check out the "opt-out" version of this starter at [https://github.com/AndiKod/tadam11ty](https://github.com/AndiKod/tadam11ty).
