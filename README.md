@@ -3,11 +3,15 @@ A simple, blank, 11ty3 starter with no over complications.
 
 ---
 
-Clone the repo, then:
+You can use your favorite tool to install and run scripts,
+NPM, Yarn, Deno, or here as an example using pnpm:
 
 ```bash
-pnpm i
+pnpm install
 ```
+It will create the correspondant lock file. 
+That's why we didn't commity any for that minimal starter.
+
 Fire the dev server on localhost:8080:
 
 ```bash
@@ -21,6 +25,19 @@ pnpm run build
 ```
 
 This will generate the `_site` folder with the built site. CSS and JS will be minified and bundled by esbuild and lightningcss.
+
+
+## Make it yours
+
+You can change the name of the starter in the `package.json` file.
+And remove the remote git repository from a terminal in the root. 
+
+```bash
+rm -rf .git
+# Eventually initiate a new git repository
+git init
+# ... then add your own remote. 
+```
 
 ## Why?
 
