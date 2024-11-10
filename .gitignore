@@ -23,5 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# Lock Files
+pnpm-lock.yaml
+
 # 11ty3vanilla
 _site 
