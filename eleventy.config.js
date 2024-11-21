@@ -1,18 +1,23 @@
-export default function(eleventyConfig) {
+export default function (eleventyConfig) {
+  // Copy the images into _site/img
+  // the css will be compiled by SASS
+  eleventyConfig.addPassthroughCopy({
+    "./public/img": "/",
+  });
 
-  // Copy the assets folder content to the _site folder
-	eleventyConfig.addPassthroughCopy({
-		"./src/assets/": "/"
-	});
+  // Chhh
+  eleventyConfig.setQuietMode(true);
 
   // Return your Object options:
   return {
     dir: {
-      input: "src", // The input directory for your templates, aka Root
+      input: "content", // Here will live the actual pages & articles
+      includes: "../_includes", // The layouts & components folder
+      data: "../_data", // The json or js data files for the  templates
       output: "_site", // The output directory for your compiled templates
-      layouts: "../includes/layouts", // The directory for your layouts
-      includes: "../includes/partials" // The directory for your includes
-    }
-  }
-
-};
+    },
+    templateFormats: ["html", "njk", "md"],
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+  };
+}

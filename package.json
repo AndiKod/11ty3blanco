@@ -1,19 +1,19 @@
 {
   "name": "blanco-11ty-starter",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "clean": "rimraf _site",
     "w:11ty": "eleventy --serve --quiet",
-    "w:sass": "sass --watch src/assets/styles:_site/css",
-    "w:tw": "npx tailwindcss -i src/assets/styles/tw.css -o _site/css/tw.css -w",
+    "w:sass": "sass --watch public/css:_site/css",
+    "w:tw": "npx tailwindcss -i public/css/tw.css -o _site/css/tw.css -w",
     "b:11ty": "eleventy",
-    "b:sass": "sass src/assets/styles:_site/css",
-    "b:tw": "npx tailwindcss -i src/assets/styles/tw.css -o _site/css/tw.css",
-    "b:js": "npx esbuild input/js/scripts.js --bundle --minify --outfile=_site/js/scripts.js",
-    "build": "npm-run-all b:sass b:js b:11ty b:tw",
-    "dev": "npm-run-all b:sass b:11ty --parallel w:sass w:11ty w:tw"
+    "b:sass": "sass public/css:_site/css --style compressed",
+    "b:tw": "npx tailwindcss -i public/css/tw.css -o _site/css/tw.css --minify",
+    "b:js": "npx esbuild public/js/scripts.js --bundle --minify --outfile=_site/js/scripts.js",
+    "build": "npm-run-all clean b:sass b:js b:11ty b:tw",
+    "dev": "npm-run-all b:sass b:11ty b:js --parallel w:sass w:11ty w:tw"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.0.0",
