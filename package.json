@@ -10,7 +10,7 @@
     "b:11ty": "eleventy",
     "b:tw": "npx @tailwindcss/cli -i public/css/tw.css -o _site/css/tw.css --minify",
     "b:js": "npx esbuild public/js/scripts.js --bundle --minify --outfile=_site/js/scripts.js",
-    "build": "npm-run-all clean b:sass b:js b:11ty b:tw",
+    "build": "npm-run-all clean b:js b:11ty b:tw",
     "dev": "npm-run-all --parallel w:11ty w:tw"
   },
   "devDependencies": {
